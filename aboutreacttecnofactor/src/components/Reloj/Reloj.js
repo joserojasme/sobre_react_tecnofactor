@@ -1,5 +1,14 @@
 import React, {Component} from 'react';
 
+const styles = {
+    footer: {
+        width: '100%',
+        backgroundColor: 'gray',
+        color: 'white',
+        textAlign: 'center',
+    }
+}
+
 class Reloj extends Component{
     state = {
         hora:'',
@@ -25,8 +34,13 @@ class Reloj extends Component{
 
     render(){
         const { hora, minutos, segundos } = this.state;
+
         return(
-            <div></div>
+            <div style={styles.footer}>
+                <p>
+                    {`Hora actual: ${hora}:${minutos}:${segundos}`}
+                </p>
+            </div>
         )
     }
 }
